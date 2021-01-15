@@ -1,0 +1,49 @@
+*{
+    box-sizing: border-box;
+    padding:0px;
+    margin:0px;
+    font-size:62.5%;
+    font-family: 'Josefin Sans', sans-serif;
+   }
+   body{
+    width:90vw;
+    height:100vh;
+    background-color: burlywood;
+
+   }
+.about{
+    /* width:10em; */
+    font-size:5em;
+    width:40em;
+    height:7em;
+}
+.btn{
+    width:10em;
+    height:1.7em;
+    font-size:5em; 
+    /* padding-right:8em; */
+
+ }
+ .container{
+     display:flex;
+     flex-direction: column;
+     text-align:center;
+    position:relative;
+    top:50%;
+    left:50%;
+    transform:translate(-55%,-55%);
+
+}
+.blocks{
+      padding-top:-3em;
+    /* padding-left:78em;  */
+    padding-bottom:5em;  
+   
+
+}
+.points{
+    display:none;
+    font-size:8em;
+    /* padding-left:9.3em; */
+   
+}
