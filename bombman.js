@@ -110,7 +110,7 @@ function showBomb(i) {
     //    // v1.onclick="final()";
     //     console.log(v1);
     // }
-    score.innerHTML = "0";
+    //score.innerHTML = "0";
 
     let msg = document.getElementsByClassName("msg")[0]
     newdiv.setAttribute("class", "text-danger");
