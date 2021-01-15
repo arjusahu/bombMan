@@ -12,28 +12,15 @@
 
    }
 .about{
-    /* width:10em; */
     font-size:5em;
-    width:40em;
-    height:7em;
 }
 .btn{
     width:10em;
     height:1.7em;
     font-size:5em; 
-    /* padding-right:8em; */
-
+    margin-bottom: .5em;
  }
- .container{
-     display:flex;
-     flex-direction: column;
-     text-align:center;
-    position:relative;
-    top:50%;
-    left:50%;
-    transform:translate(-55%,-55%);
-
-}
+ 
 .blocks{
       padding-top:-3em;
     /* padding-left:78em;  */
@@ -46,4 +33,10 @@
     font-size:8em;
     /* padding-left:9.3em; */
    
+}
+
+.hello{
+    display: flex;
+    flex-direction: column;
+    margin-top: 5em;
 }

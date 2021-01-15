@@ -7,10 +7,10 @@ let newdiv = document.createElement("div");
 // points.setAttribute("class","text-center");
 
 let count = 0;
-console.log(about, button, blocks);
+//console.log(about, button, blocks);
 button.addEventListener("click", formationOfBlocks);
 
-console.log("clicked");
+//console.log("clicked");
 function formationOfBlocks() {
 
     newdiv.innerHTML = "";
@@ -73,10 +73,10 @@ function editbox(i) {
     }
 
     else {
-
         score.innerHTML = count;
         let box = document.getElementById(i)
-        box.style.backgroundColor = "green";
+        // box.innerHTML="😀";
+        box.style.backgroundColor = "green"; 
         setTimeout(() => {
             box.style.backgroundColor = "white";
             box.innerHTML = "";
@@ -101,17 +101,9 @@ function showBomb(i) {
     for (let even = 1; even <= 81; even++) {
         let v1 = document.getElementById(even);
         v1.onclick = "final()";
-        
+
         //console.log(v1);
     }
-    // for (let even=1;even<=81;even++)
-    // {
-    //     let v1 = document.getElementById(even); 
-    //    // v1.onclick="final()";
-    //     console.log(v1);
-    // }
-    //score.innerHTML = "0";
-
     let msg = document.getElementsByClassName("msg")[0]
     newdiv.setAttribute("class", "text-danger");
     newdiv.setAttribute("style", "font-size:10em");
@@ -127,10 +119,4 @@ function showBomb(i) {
 // function final()
 // {
 //     console.log("ggg");
-//     let msg = document.getElementsByClassName("msg")[0]
-//     let newdiv=document.createElement("div");
-//     newdiv.setAttribute("class","text-danger");
-//     newdiv.innerHTML="GAME OVERooooooooooooooooooooooooooooooooooooooooooooooooooooooooooo";
-//     msg.appendChild(newdiv);
-
-// }
+//   }
