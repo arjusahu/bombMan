@@ -7,6 +7,7 @@ let newdiv = document.createElement("div");
 // points.setAttribute("class","text-center");
 
 let count = 0;
+let arr = [];
 //console.log(about, button, blocks);
 button.addEventListener("click", formationOfBlocks);
 
@@ -17,6 +18,16 @@ function formationOfBlocks() {
     score.innerHTML = "0";
     points.style.display = "inline-block";
     about.style.display = "none";
+
+    for (let ran = 0; ran < 10; ran++) {
+        let no = Math.ceil(Math.random() * 81);
+        if (!arr.includes(no)) {
+            arr[ran] = no;
+        }
+        else {
+            ran = ran - 1;
+        }
+    }
     let html = "";
     for (let i = 1; i <= 81; i++) {
         html = html + `<span id="${i}" onclick="editbox(this.id)" class="box" style="display:inline-block;font-size:6em;
@@ -31,7 +42,7 @@ function formationOfBlocks() {
 
 
 
-let arr = [];
+let copy1=0;
 function editbox(i) {
     button.innerHTML = "Restart";
     let score1 = document.getElementById("score").innerHTML;
@@ -49,6 +60,16 @@ function editbox(i) {
         }
 
     }
+    let copy2=copy1;
+    copy1=i;
+    if(copy1!=copy2)
+    {
+        //console.log(copy1,copy2);
+        if(copy2!=0)
+        {
+        let boxafter = document.getElementById(copy2);
+        boxafter.style.backgroundColor = "white";
+        }
     if (score1 == "")
         count = 1;
     else {
@@ -56,15 +77,7 @@ function editbox(i) {
     }
 
     // let random=Math.ceil(Math.random()*81);
-    for (let ran = 0; ran < 10; ran++) {
-        let no = Math.ceil(Math.random() * 81);
-        if (!arr.includes(no)) {
-            arr[ran] = no;
-        }
-        else {
-            ran = ran - 1;
-        }
-    }
+   
     //console.log(arr, i);
 
     if (arr.includes(parseInt(i))) {
@@ -77,12 +90,13 @@ function editbox(i) {
         let box = document.getElementById(i)
         // box.innerHTML="😀";
         box.style.backgroundColor = "green"; 
-        setTimeout(() => {
-            box.style.backgroundColor = "white";
-            box.innerHTML = "";
-        }, 1000);
+        // setTimeout(() => {
+        //     box.style.backgroundColor = "white";
+        //     box.innerHTML = "";
+        // }, 1000);
 
     }
+}
 }
 
 
